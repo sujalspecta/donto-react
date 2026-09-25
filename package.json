@@ -7,7 +7,7 @@
     "@fortawesome/react-fontawesome": "^3.5.0",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/user-event": "^14.6.7",
     "bootstrap": "^4.4.1",
     "install": "^0.13.0",
     "jquery": "^3.4.1",
