@@ -49,7 +49,7 @@
   dependencies:
     "@babel/types" "^7.29.8"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.24.7", "@babel/runtime@^7.26.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.24.7", "@babel/runtime@^7.26.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
   version "7.29.7"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.7.tgz"
   integrity sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==
@@ -275,11 +275,6 @@ bootstrap@^5.3.8:
   resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.8.tgz"
   integrity sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==
 
-chain-function@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/chain-function/-/chain-function-1.0.1.tgz"
-  integrity sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==
-
 classnames@^2.3.2:
   version "2.5.1"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
@@ -343,13 +338,6 @@ dom-accessibility-api@^0.6.3:
   version "0.6.3"
   resolved "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.6.3.tgz"
   integrity sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w==
-
-dom-helpers@^3.2.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/dom-helpers/-/dom-helpers-3.4.0.tgz"
-  integrity sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
 
 dom-helpers@^5.0.1, dom-helpers@^5.2.0, dom-helpers@^5.2.1:
   version "5.2.1"
@@ -420,7 +408,7 @@ lightningcss@^1.33.0:
     lightningcss-win32-arm64-msvc "1.33.0"
     lightningcss-win32-x64-msvc "1.33.0"
 
-loose-envify@^1.0.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -474,7 +462,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.8.1:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -482,13 +470,6 @@ prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.8.1:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.13.1"
-
-react-addons-css-transition-group@^15.6.2:
-  version "15.6.2"
-  resolved "https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.2.tgz"
-  integrity sha512-M5AJydHOUGq+YujoQLL8f9mQ0QLqxjqHUpWyvUmWVCYi93iGz53HwNBwzHbr0u21KABoPzyLYZZgMk974uPovw==
-  dependencies:
-    react-transition-group "^1.2.0"
 
 react-aria@^3.48.0:
   version "3.52.1"
@@ -538,13 +519,6 @@ react-dom@^19.3.0:
   dependencies:
     scheduler "^0.28.0"
 
-react-fancybox@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.npmjs.org/react-fancybox/-/react-fancybox-0.2.5.tgz"
-  integrity sha512-r+IzD737GbBsa+S+TVV/uFz7cwVc/UsYCxD1HoWrSF57gsiatAuW/sg2HYeBf38wxCr0neS7p8YgfTPigH7wTQ==
-  dependencies:
-    react-addons-css-transition-group "^15.6.2"
-
 react-is@^16.13.1, react-is@^16.3.2:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -591,17 +565,6 @@ react-stately@3.50.0:
     "@react-types/shared" "^3.36.1"
     "@swc/helpers" "^0.5.0"
     use-sync-external-store "^1.6.0"
-
-react-transition-group@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-1.2.1.tgz"
-  integrity sha512-CWaL3laCmgAFdxdKbhhps+c0HRGF4c+hdM4H23+FI1QBNUyx/AMeIJGWorehPNSaKnQNOAxL7PQmqMu78CDj3Q==
-  dependencies:
-    chain-function "^1.0.0"
-    dom-helpers "^3.2.0"
-    loose-envify "^1.3.1"
-    prop-types "^15.5.6"
-    warning "^3.0.0"
 
 react-transition-group@^4.4.5:
   version "4.4.5"
@@ -743,16 +706,14 @@ vite@^8.3.1:
   optionalDependencies:
     fsevents "~2.3.3"
 
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/warning/-/warning-3.0.0.tgz"
-  integrity sha512-jMBt6pUrKn5I+OGgtQ4YZLdhIeJmObddh6CsibPxyQ5yPZm1XExSyzC1LCNX7BzhxWgiHmizBWJTHJIjMjTQYQ==
-  dependencies:
-    loose-envify "^1.0.0"
-
 warning@^4.0.0, warning@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmjs.org/warning/-/warning-4.0.3.tgz"
   integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
   dependencies:
     loose-envify "^1.0.0"
+
+yet-another-react-lightbox@^3.32.2:
+  version "3.32.2"
+  resolved "https://registry.npmjs.org/yet-another-react-lightbox/-/yet-another-react-lightbox-3.32.2.tgz"
+  integrity sha512-F4HtHQfUNpvkj+AmECgWM4XRdCqMY5gXpKgOUx39+T+FyxLe8II4SK/pwMyYj2X54KH9lFSQeHYY1/GfYf3SdA==

@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import CountUp from 'react-countup';
 import Banner from '../Banner';
-import SectionTitleOne from '../SectionTitleOne'
+import SectionTitleOne from '../SectionTitleOne';
 import Appointment from '../Appointment';
 import BlogOne from '../Blog/BlogOne';
 import BlogData from '../Data/BlogData';
+
+// 1. Static Image/Icon Imports
+import iconLike from '../../assets/img/icons/like.png';
+import iconLove from '../../assets/img/icons/love.png';
+import iconRespect from '../../assets/img/icons/respect.png';
+import imgExperiencedDentist from '../../assets/img/experienceddentist.png';
 
 class About extends Component {
     render() {
@@ -34,7 +40,7 @@ class About extends Component {
                             <div className="col-md-6 col-lg-4 col-12">
                                 <div className="best-service-item-box">
                                     <div className="service-box-icon">
-                                        <img src={require ("../../assets/img/icons/like.png") } alt="" />
+                                        <img src={iconLike} alt="Like Icon" />
                                     </div>
                                     <h3><a href=".#">Consolation</a></h3>
                                     <p>Lorem Ipsum is simply dummy text of the printings and type and setting for content </p>
@@ -43,7 +49,7 @@ class About extends Component {
                             <div className="col-md-6 col-lg-4 col-12">
                                 <div className="best-service-item-box">
                                     <div className="service-box-icon">
-                                        <img src={require ("../../assets/img/icons/love.png") } alt="" />
+                                        <img src={iconLove} alt="Love Icon" />
                                     </div>
                                     <h3><a href=".#">Familiarity</a></h3>
                                     <p>Lorem Ipsum is simply dummy text of the printings and type and setting for content </p>
@@ -52,7 +58,7 @@ class About extends Component {
                             <div className="col-md-6 col-lg-4 col-12">
                                 <div className="best-service-item-box">
                                     <div className="service-box-icon">
-                                        <img src={require ("../../assets/img/icons/respect.png") } alt="" />
+                                        <img src={iconRespect} alt="Respect Icon" />
                                     </div>
                                     <h3><a href=".#">Outcome</a></h3>
                                     <p>Lorem Ipsum is simply dummy text of the printings and type and setting for content </p>
@@ -66,7 +72,7 @@ class About extends Component {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6 col-12">
-                                <img src={require("../../assets/img/experienceddentist.png")} alt="" />
+                                <img src={imgExperiencedDentist} alt="Experienced Dentist" />
                             </div>
                             <div className="col-lg-6 col-12">
                                 <div className="promo-text mt-5 mt-lg-0">
@@ -94,33 +100,25 @@ class About extends Component {
                                 <div className="achievement-funfact row">
                                     <div className="col-12 col-sm-6 text-center">
                                         <div className="single-am-funfact">
-                                                <CountUp
-                                                end={22}
-                                                duration={3.75} />
+                                            <CountUp end={22} duration={3.75} />
                                             <p>Patients</p>
                                         </div>
                                     </div>
                                     <div className="col-12 col-sm-6 text-center">
                                         <div className="single-am-funfact">
-                                                <CountUp
-                                                    end={75}
-                                                    duration={3.75} />
+                                            <CountUp end={75} duration={3.75} />
                                             <p>Dentist</p>
                                         </div>
                                     </div>
                                     <div className="col-12 col-sm-6 text-center">
                                         <div className="single-am-funfact">
-                                                <CountUp
-                                                    end={25}
-                                                    duration={3.75} />
+                                            <CountUp end={25} duration={3.75} />
                                             <p>Awards</p>
                                         </div>
                                     </div>
                                     <div className="col-12 col-sm-6 text-center">
                                         <div className="single-am-funfact">
-                                                <CountUp
-                                                    end={28}
-                                                    duration={3.75} />
+                                            <CountUp end={28} duration={3.75} />
                                             <p>Branch</p>
                                         </div>
                                     </div>
@@ -130,12 +128,12 @@ class About extends Component {
                     </div>
                 </section>
                 
+                {/* Cleanly closed components */}
                 <BlogOne BlogData={BlogData} />
                 <Appointment />
-
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default About
+export default About;

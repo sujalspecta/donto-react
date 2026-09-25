@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Appointment from '../Appointment';
 import Banner from '../Banner';
 
+// 1. Static Image Imports
+import profileImg from '../../assets/img/dentist-profile-img.jpg';
+import achievementImg from '../../assets/img/achievement.jpg';
 
 class DentistDetails extends Component {
     render() {
-        var bg = require ('../../assets/img/dentist-profile-img.jpg');
-        var achievementImg = require('../../assets/img/achievement.jpg');
-
         return (
             <React.Fragment>
                 <Banner pageTitle='Dr. Nathan Currie' />
@@ -20,20 +20,25 @@ class DentistDetails extends Component {
                                     <h2>Dr. Nathan Currie <span>(DMD, MS, DICOI)</span></h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                                     <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy.</p>
+                                    
                                     <div className="dentist-award-membership">
                                         <h3>Dental Associations</h3>
-                                        <li>American Dental Association</li>
-                                        <li>Academy of General Dentistry</li>
-                                        <li>Carolina Dental Society</li>
-                                        <li>Academy of General Dentistry</li>
-                                        <li>American Association of Women Dentists</li>
+                                        {/* Wrapped in a valid list wrapper */}
+                                        <ul>
+                                            <li>American Dental Association</li>
+                                            <li>Academy of General Dentistry</li>
+                                            <li>Carolina Dental Society</li>
+                                            <li>Academy of General Dentistry</li>
+                                            <li>American Association of Women Dentists</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div className="col-md-5 col-lg-4 col-12">
                                 <div className="dentist-profile-details">
-                                    <div className="profile-img bg-cover mb-35" style={{ backgroundImage: "url(" + bg + ")" }}  >
-                                    </div>
+                                    {/* Cleaned up inline styling strings */}
+                                    <div className="profile-img bg-cover mb-35" style={{ backgroundImage: `url(${profileImg})` }} />
                                     <p>Name: <strong>Nathan Currie</strong></p>
                                     <p>Specialization: <strong>Orthodontics</strong></p>
                                     <p>Phone: <strong>1-866-764-5387</strong></p>
@@ -52,7 +57,7 @@ class DentistDetails extends Component {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-md-6 col-lg-6 col-12">
-                                <div className="achievement-img-banner bg-cover bg-center" style={{ backgroundImage: "url(" + achievementImg + ")" }}></div>
+                                <div className="achievement-img-banner bg-cover bg-center" style={{ backgroundImage: `url(${achievementImg})` }} />
                             </div>
                             <div className="col-md-6 col-lg-6 col-12">
                                 <div className="promo-text">
@@ -67,8 +72,8 @@ class DentistDetails extends Component {
 
                 <Appointment />                
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default DentistDetails
+export default DentistDetails;

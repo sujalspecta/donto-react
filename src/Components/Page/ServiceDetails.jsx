@@ -1,23 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Appointment from '../Appointment';
 import Banner from '../Banner';
- 
+
+// 1. Static Image Imports for Service Assets
+import bg1 from '../../assets/img/video-bg1.jpg';
+import bg2 from '../../assets/img/video-bg2.jpg';
+import promoImg1 from '../../assets/img/service-details-promo1.png';
+import promoImg2 from '../../assets/img/service-details-promo2.png';
+
+// 2. Static Image Imports for Shapes
+import shapePlusb from '../../assets/img/shape/plusb.png';
+import shapePlusg from '../../assets/img/shape/plusg.png';
+import shapeDotmr from '../../assets/img/shape/dotmr.png';
+import shapeXsrdot from '../../assets/img/shape/xsrdot.png';
+import shapePlusr from '../../assets/img/shape/plusr.png';
+import shapeCircle1 from '../../assets/img/shape/circle1.png';
+import shapeBluef from '../../assets/img/shape/bluef.png';
+
 class ServiceDetails extends Component {
     render() {
-
-        let bg1 = require('../../assets/img/video-bg1.jpg');
-        let bg2 = require('../../assets/img/video-bg2.jpg');
-
         return (
             <React.Fragment>
                 <Banner pageTitle='Service Details' />
+                
                 <section className="promo-content-section section-padding">
                     <div className="promo-section-shape">
-                        <img src={require("../../assets/img/shape/plusb.png")} alt="" className="shape promo1" />
-                        <img src={require("../../assets/img/shape/plusg.png")} alt="" className="shape promo2" />
-                        <img src={require("../../assets/img/shape/dotmr.png")} alt="" className="shape promo3" />
-                        <img src={require("../../assets/img/shape/xsrdot.png")} alt="" className="shape promo4" />
-                        <img src={require("../../assets/img/shape/plusb.png")} alt="" className="shape promo5" />
+                        <img src={shapePlusb} alt="Shape" className="shape promo1" />
+                        <img src={shapePlusg} alt="Shape" className="shape promo2" />
+                        <img src={shapeDotmr} alt="Shape" className="shape promo3" />
+                        <img src={shapeXsrdot} alt="Shape" className="shape promo4" />
+                        <img src={shapePlusb} alt="Shape" className="shape promo5" />
                     </div>
                     <div className="container">
                         <div className="row align-items-center">
@@ -29,23 +41,24 @@ class ServiceDetails extends Component {
                                 </div>
                             </div>
                             <div className="col-md-12 col-lg-6 col-12 mt-4 mt-lg-0">
-                                <img src={require("../../assets/img/service-details-promo1.png")} alt="" />
+                                <img src={promoImg1} alt="PRF Healing" />
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <section className="promo-content-section section-bg text-white promo-bg section-padding">
                     <div className="promo-section-shape">
-                        <img src={require("../../assets/img/shape/plusr.png")} alt="" className="shape promo1" />
-                        <img src={require("../../assets/img/shape/plusg.png")} alt="" className="shape promo2" />
-                        <img src={require("../../assets/img/shape/circle1.png")} alt="" className="shape promo3" />
-                        <img src={require("../../assets/img/shape/bluef.png")} alt="" className="shape promo4" />
-                        <img src={require("../../assets/img/shape/plusb.png")} alt="" className="shape promo5" />
+                        <img src={shapePlusr} alt="Shape" className="shape promo1" />
+                        <img src={shapePlusg} alt="Shape" className="shape promo2" />
+                        <img src={shapeCircle1} alt="Shape" className="shape promo3" />
+                        <img src={shapeBluef} alt="Shape" className="shape promo4" />
+                        <img src={shapePlusb} alt="Shape" className="shape promo5" />
                     </div>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-md-12 col-lg-6 col-12 mb-4 mb-lg-0">
-                                <img src={require("../../assets/img/service-details-promo2.png")} alt="" />
+                                <img src={promoImg2} alt="Composite vs Mercury" />
                             </div>
                             <div className="col-md-12 col-lg-6 col-12">
                                 <div className="promo-text">
@@ -60,25 +73,25 @@ class ServiceDetails extends Component {
 
                 <section className="featured-video-section section-padding">
                     <div className="promo-section-shape">
-                        <img src={require("../../assets/img/shape/plusr.png")} alt="" className="shape promo1" />
-                        <img src={require("../../assets/img/shape/dotmr.png")} alt="" className="shape promo2" />
-                        <img src={require("../../assets/img/shape/circle1.png")} alt="" className="shape promo3" />
-                        <img src={require("../../assets/img/shape/bluef.png")} alt="" className="shape promo4" />
-                        <img src={require("../../assets/img/shape/plusb.png")} alt="" className="shape promo5" />
+                        <img src={shapePlusr} alt="Shape" className="shape promo1" />
+                        <img src={shapeDotmr} alt="Shape" className="shape promo2" />
+                        <img src={shapeCircle1} alt="Shape" className="shape promo3" />
+                        <img src={shapeBluef} alt="Shape" className="shape promo4" />
+                        <img src={shapePlusb} alt="Shape" className="shape promo5" />
                     </div>
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-md-12 col-lg-8 offset-lg-2 text-center">
                                 <div className="section-text-wrap pb-25">
                                     <h1>Safety First</h1>
-                                    <p>Since 1998, Donto  Dentistry has been proud to combine modern techniques and high-tech equipment. Dr. John Dae, Micha  and his team deliver a personalized and comfortable dental care experience unlike any other Mason dentist.</p>
+                                    <p>Since 1998, Donto Dentistry has been proud to combine modern techniques and high-tech equipment. Dr. John Dae, Micha and his team deliver a personalized and comfortable dental care experience unlike any other Mason dentist.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-6 col-lg-6 col-12">
                                 <div className="single-video-item">
-                                    <div className="video-bg-img" style={{ backgroundImage: "url(" + bg1 + ")" }}>
+                                    <div className="video-bg-img" style={{ backgroundImage: `url(${bg1})` }}>
                                         <a href="https://www.youtube.com/watch?v=0s35QCFg7p0" className="popup-video video-play-button">
                                             <i className="fal fa-play" />
                                         </a>
@@ -88,7 +101,7 @@ class ServiceDetails extends Component {
                             </div>
                             <div className="col-md-6 col-lg-6 col-12">
                                 <div className="single-video-item">
-                                    <div className="video-bg-img" style={{ backgroundImage: "url(" + bg2 + ")" }}>
+                                    <div className="video-bg-img" style={{ backgroundImage: `url(${bg2})` }}>
                                         <a href="https://www.youtube.com/watch?v=0s35QCFg7p0" className="popup-video video-play-button">
                                             <i className="fal fa-play" />
                                         </a>
@@ -102,8 +115,8 @@ class ServiceDetails extends Component {
 
                 <Appointment />
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default ServiceDetails
+export default ServiceDetails;
