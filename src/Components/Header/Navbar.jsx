@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+// Imported the logo statically (Vite does not support Webpack's require() syntax)
+import logoImg from '../../assets/img/logo.png';
 
 class Navbar extends Component {
     render() {
@@ -9,11 +10,14 @@ class Navbar extends Component {
                 <div className="main-menu">
                     <div className="container">
                         <div className="row align-items-center">
+                            {/* Logo Section */}
                             <div className="col-md-3 col-lg-2 d-flex col-5">
                                 <Link className="navbar-brand logo" to='/'>
-                                    <img src={require("../../assets/img/logo.png") } alt="donto" />
+                                    <img src={logoImg} alt="donto" />
                                 </Link>
                             </div>
+                            
+                            {/* Desktop Navigation */}
                             <div className="col-lg-10 col-md-9 d-none d-lg-block text-lg-right">
                                 <nav id="responsive-menu" className="menu-style-one">
                                     <ul className="menu-items">
@@ -26,13 +30,17 @@ class Navbar extends Component {
                                     </ul>
                                 </nav>
                             </div>
-                            <div className="col-md-9 col-sm-7  col-6 d-block d-lg-none">
+                            
+                            {/* Mobile Hamburger Toggle */}
+                            <div className="col-md-9 col-sm-7 col-6 d-block d-lg-none">
                                 <nav className="navbar navbar-expand-lg text-right navbar-light mobile-nav">
                                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobilenav">
                                         <span className="fal fa-bars" />
                                     </button>
                                 </nav>
                             </div>
+                            
+                            {/* Mobile Dropdown Menu */}
                             <div className="collapse navbar-collapse mobile-menu" id="mobilenav">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="nav-item active">
@@ -59,8 +67,8 @@ class Navbar extends Component {
                     </div>
                 </div>
             </header>            
-        )
+        );
     }
 }
 
-export default Navbar
+export default Navbar;

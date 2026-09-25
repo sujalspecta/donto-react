@@ -1,28 +1,38 @@
-import React, { Component } from 'react'
-import SectionTitleOne from '../SectionTitleOne'
-import ReactFancyBox from 'react-fancybox'
-import 'react-fancybox/lib/fancybox.css'
+import React, { Component } from 'react';
+import SectionTitleOne from '../SectionTitleOne';
+import ReactFancyBox from 'react-fancybox';
+import 'react-fancybox/lib/fancybox.css';
+
+// 1. Static Image Imports for Gallery Images
+import img1 from '../../assets/img/gallery/g1.jpg';
+import img2 from '../../assets/img/gallery/g2.jpg';
+import img3 from '../../assets/img/gallery/g3.jpg';
+import img4 from '../../assets/img/gallery/g4.jpg';
+import img5 from '../../assets/img/gallery/g5.jpg';
+
+// 2. Static Image Imports for Background Shapes
+import shapeRmc from '../../assets/img/shape/rmc.png';
+import shapePlusgs from '../../assets/img/shape/plusgs.png';
+import shapePlusg from '../../assets/img/shape/plusg.png';
+import shapePlusr from '../../assets/img/shape/plusr.png';
+import shapeSgdot from '../../assets/img/shape/sgdot.png';
+import shapeXsrdot from '../../assets/img/shape/xsrdot.png';
 
 class GalleryOne extends Component {
     render() {
-            var img1 = require('../../assets/img/gallery/g1.jpg');
-            var img2 = require('../../assets/img/gallery/g2.jpg');
-            var img3 = require('../../assets/img/gallery/g3.jpg');
-            var img4 = require('../../assets/img/gallery/g4.jpg');
-            var img5 = require('../../assets/img/gallery/g5.jpg');
-
         return (
             <section className="gallery-one-wrapper section-bg text-white section-padding">
                 <div className="hero-shape service-shape">
-                    <img src={require("../../assets/img/shape/rmc.png")} alt="donto" className="shape shape2" />
-                    <img src={require("../../assets/img/shape/plusgs.png")} alt="donto" className="shape shape4" />
-                    <img src={require("../../assets/img/shape/plusg.png")} alt="donto" className="shape shape6" />
-                    <img src={require("../../assets/img/shape/plusr.png")} alt="donto" className="shape shape8" />
-                    <img src={require("../../assets/img/shape/sgdot.png")} alt="donto" className="shape shape9" />
-                    <img src={require("../../assets/img/shape/xsrdot.png")} alt="donto" className="shape shape10" />
-                    <img src={require("../../assets/img/shape/rmc.png")} alt="donto" className="shape s1" />
-                    <img src={require("../../assets/img/shape/plusgs.png")} alt="donto" className="shape s2" />
-                    <img src={require("../../assets/img/shape/sgdot.png")} alt="donto" className="shape s3" />
+                    {/* Replaced inline require() calls with static import variables */}
+                    <img src={shapeRmc} alt="donto" className="shape shape2" />
+                    <img src={shapePlusgs} alt="donto" className="shape shape4" />
+                    <img src={shapePlusg} alt="donto" className="shape shape6" />
+                    <img src={shapePlusr} alt="donto" className="shape shape8" />
+                    <img src={shapeSgdot} alt="donto" className="shape shape9" />
+                    <img src={shapeXsrdot} alt="donto" className="shape shape10" />
+                    <img src={shapeRmc} alt="donto" className="shape s1" />
+                    <img src={shapePlusgs} alt="donto" className="shape s2" />
+                    <img src={shapeSgdot} alt="donto" className="shape s3" />
                 </div>
                 <div className="container">
 
@@ -67,8 +77,8 @@ class GalleryOne extends Component {
                     </div>
                 </div>
             </section>
-        )
+        );
     }
 }
 
-export default GalleryOne
+export default GalleryOne;

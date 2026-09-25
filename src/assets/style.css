@@ -529,9 +529,7 @@ body.style-two>a {
     padding: 5px 0px;
 }
 
-@media (max-width: 767px) {
-    position: relative;
-}
+
 
 .header-one {
     position: absolute;

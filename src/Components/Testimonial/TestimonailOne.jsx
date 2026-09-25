@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import SectionTitleOne from '../SectionTitleOne';
 
+// 1. Static Image Imports for Background Shapes
+import shapeRmc from '../../assets/img/shape/rmc.png';
+import shapePlusgs from '../../assets/img/shape/plusgs.png';
+import shapePlusg from '../../assets/img/shape/plusg.png';
+import shapePlusr from '../../assets/img/shape/plusr.png';
+import shapeSgdot from '../../assets/img/shape/sgdot.png';
+
+// 2. Static Image Import for Testimonial Profile
+import testi1 from '../../assets/img/testi1.png';
 
 class TestimonailOne extends Component {
     render() {
-
         return (
             <section className="testimonial-one-wrapper section-padding">
                 <div className="hero-shape service-shape">
-                    <img src={require("../../assets/img/shape/rmc.png")} alt="modinatheme" className="shape shape2" />
-                    <img src={require("../../assets/img/shape/plusgs.png")} alt="modinatheme" className="shape shape4" />
-                    <img src={require("../../assets/img/shape/plusg.png")} alt="modinatheme" className="shape shape6" />
-                    <img src={require("../../assets/img/shape/plusr.png")} alt="modinatheme" className="shape shape8" />
-                    <img src={require("../../assets/img/shape/sgdot.png")} alt="modinatheme" className="shape shape9" />
+                    {/* Replaced inline require() calls with static import variables */}
+                    <img src={shapeRmc} alt="modinatheme" className="shape shape2" />
+                    <img src={shapePlusgs} alt="modinatheme" className="shape shape4" />
+                    <img src={shapePlusg} alt="modinatheme" className="shape shape6" />
+                    <img src={shapePlusr} alt="modinatheme" className="shape shape8" />
+                    <img src={shapeSgdot} alt="modinatheme" className="shape shape9" />
                 </div>
                 <div className="container">
 
@@ -22,7 +31,8 @@ class TestimonailOne extends Component {
                         <div className="col-md-6 col-lg-4 col-12">
                             <div className="single-client-box">
                                 <div className="client-image">
-                                    <img src={require("../../assets/img/testi1.png")} alt="modinatheme" />
+                                    {/* Replaced require() with static import variable */}
+                                    <img src={testi1} alt="modinatheme" />
                                 </div>
                                 <h3>Aliceano Colby</h3>
                                 <span>CEO of Prime IT</span>
@@ -38,8 +48,8 @@ class TestimonailOne extends Component {
                     </div>
                 </div>
             </section>
-        )
+        );
     }
 }
 
-export default TestimonailOne
+export default TestimonailOne;
