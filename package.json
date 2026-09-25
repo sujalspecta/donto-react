@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^3.5.0",
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
