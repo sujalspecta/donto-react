@@ -13,13 +13,18 @@ class BlogOne extends Component {
 
                     <div className="row">
                         {
-                            BlogData.postItem.map( (item, index) => {
+                            BlogData.postItem.map((item, index) => {
                                 return (
                                     index < 3 ?
-                                    <div className="col-md-6 col-lg-6 col-xl-4 col-sm-12">
-                                        <div className="single-blog-card" key={item.id}>
+                                    /* 🛠️ Key moved here to the outermost element */
+                                    <div className="col-md-6 col-lg-6 col-xl-4 col-sm-12" key={item.id}>
+                                        <div className="single-blog-card">
                                             <div className="featured-thumb">
-                                                <img src={require("../../assets/img/blog/" + item.imgUrl)} alt="" />
+                                                {/* 🛠️ Modern dynamic URL fix replacing require() */}
+                                                <img 
+                                                    src={new URL(`../../assets/img/blog/${item.imgUrl}`, import.meta.url).href} 
+                                                    alt={item.title} 
+                                                />
                                             </div>
                                             <div className="card-content">
                                                 <h3><a href={item.link}>{item.title}</a></h3>
@@ -46,4 +51,4 @@ class BlogOne extends Component {
     }
 }
 
-export default BlogOne
+export default BlogOne;

@@ -15,7 +15,11 @@ class Dentist extends Component {
                             <div className="col-md-6 col-lg-4 col-12" key={member.id}>
                                 <div className="single-doctor">
                                     <div className="doctor-profile">
-                                        <img src={require("../../assets/img/" + member.imgUrl)} alt="" />
+                                       
+                                        <img 
+                                            src={new URL(`../../assets/img/${member.imgUrl}`, import.meta.url).href} 
+                                            alt={member.name} 
+                                        />
                                     </div>
                                     <div className="doctor-info">
                                         <h3><Link to={member.link}>{member.name}</Link></h3>
@@ -42,4 +46,4 @@ class Dentist extends Component {
     }
 }
 
-export default Dentist
+export default Dentist;

@@ -8,7 +8,6 @@ class TeamOne extends Component {
         let TeamData = this.props.TeamData;
 
         return (
-
             <section className="doctors-wrapper section-padding">
                 <div className="container">
 
@@ -21,20 +20,26 @@ class TeamOne extends Component {
                                 
                                 return (
                                     index < 3 ? 
-                                    <div className="col-md-6 col-lg-4 col-12" key={member.id}>
+                                    /* 🛠️ Fixed duplicate key warning by combining id and loop index */
+                                    <div className="col-md-6 col-lg-4 col-12" key={`${member.id}-${index}`}>
                                         <div className="single-doctor">
                                             <div className="doctor-profile">
-                                                <img src={require("../../assets/img/" + member.imgUrl)} alt="" />
+                                                {/* 🛠️ Modern dynamic URL fix replacing require() */}
+                                                <img 
+                                                    src={new URL(`../../assets/img/${member.imgUrl}`, import.meta.url).href} 
+                                                    alt={member.name} 
+                                                />
                                             </div>
                                             <div className="doctor-info">
-                                                    <h3><Link to={member.link}>{member.name}</Link></h3>
+                                                <h3><Link to={member.link}>{member.name}</Link></h3>
                                                 <span>{member.position}</span>
                                             </div>
                                             <div className="doctor-social-icons">
                                                 {
-                                                    member.socialIcon.map(social => {
+                                                    member.socialIcon.map((social, socialIndex) => {
                                                         return (
-                                                            <a href={social.url} key={social.id}><i className={social.icon} /></a>
+                                                            /* 🛠️ Added unique key configuration for nested items */
+                                                            <a href={social.url} key={`${social.id}-${socialIndex}`}><i className={social.icon} /></a>
                                                         )
                                                     })
                                                 }
@@ -57,4 +62,4 @@ class TeamOne extends Component {
     }
 }
 
-export default TeamOne
+export default TeamOne;

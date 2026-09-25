@@ -12,10 +12,15 @@ import React, { Component } from 'react'
                 BlogData.postItem.map((item, index) => {
                     return (
                         index < 2 ?
-                            <div className="col-md-6 col-lg-6 col-sm-12">
-                                <div className="single-blog-card" key={item.id}>
+                          
+                            <div className="col-md-6 col-lg-6 col-sm-12" key={item.id}>
+                                <div className="single-blog-card">
                                     <div className="featured-thumb">
-                                        <img src={require("../../assets/img/blog/" + item.imgUrl)} alt="" />
+                                      
+                                        <img 
+                                            src={new URL(`../../assets/img/blog/${item.imgUrl}`, import.meta.url).href} 
+                                            alt={item.title} 
+                                        />
                                     </div>
                                     <div className="card-content">
                                         <h3><a href={item.link}>{item.title}</a></h3>
@@ -40,4 +45,4 @@ import React, { Component } from 'react'
     }
 }
 
-export default RecentPost
+export default RecentPost;
