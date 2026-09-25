@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeOne from './Components/HomeOne';
 import Header from './Components/Header/Header';
 import FooterOne from './Components/Footer/FooterOne';
@@ -18,22 +18,17 @@ function App() {
     <div className="main-wrapper">
       <Router>
         <Header />
-        
-        <Route exact path='/' render={props => (
-          <React.Fragment>
-            <HomeOne />
-          </React.Fragment>
-        )} />
-        
-        <Route path='/Page/About' component={About} />
-        <Route path='/Page/ServiceDetails' component={ServiceDetails} />
-        <Route path='/Page/DentistDetails' component={DentistDetails} />
-        <Route path='/Page/BlogDetails' component={BlogDetails} />
-        <Route path='/Page/Blog' component={Blog} />
-        <Route path='/Page/Team' component={Team} />
-        <Route path='/Page/Contact' component={Contact} />
-
-		    <FooterOne FooterData={FooterData} />
+        <Routes>
+          <Route path='/' element={<HomeOne />} />
+          <Route path='/Page/About' element={<About />} />
+          <Route path='/Page/ServiceDetails' element={<ServiceDetails />} />
+          <Route path='/Page/DentistDetails' element={<DentistDetails />} />
+          <Route path='/Page/BlogDetails' element={<BlogDetails />} />
+          <Route path='/Page/Blog' element={<Blog />} />
+          <Route path='/Page/Team' element={<Team />} />
+          <Route path='/Page/Contact' element={<Contact />} />
+        </Routes>
+        <FooterOne FooterData={FooterData} />
       </Router>
     </div>
   );
